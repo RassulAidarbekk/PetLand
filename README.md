@@ -25,7 +25,7 @@ Users can create pets, merge them for hybrids, list them on the market, and buy/
 - npm or yarn
 - MongoDB Atlas account (free tier is enough)
 - MetaMask browser extension
-- Sepolia testnet ETH (get from faucet: https://sepoliafaucet.com)
+- Sepolia testnet ETH (get from faucet: https://sepoliafaucet.com or https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 
 ## Installation
 

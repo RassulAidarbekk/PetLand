@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Pets</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+  <div id="notificationContainer" class="notification-container"></div>
+  <nav>
+    <button onclick="window.location.href='index.html'">Home</button>
+    <button onclick="window.location.href='mypets.html'">My Pets</button>
+    <button onclick="window.location.href='market.html'">Market</button>
+    <button id="connectWallet">Connect Wallet</button>
+    <span id="balance"></span>
+  </nav>
+
+  <main>
+    <h1>My Pets</h1>
+
+    <div class="actions-bar">
+    <button id="mergePets" class="btn btn-merge">Merge Pets (20 PetCoin)</button>
+    </div>
+
+    <div id="petsContainer" class="pets-grid"></div>
+    <div id="loading" class="loading">Loading...</div>
+    <div id="noPets" style="display:none; text-align:center; padding:60px;">
+      <h3>You don't have any pets yet</h3>
+      <p>Create your first pet on the home page!</p>
+    </div>
+
+    <div id="mergeModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close" onclick="closeMergeModal()">×</span>
+      <h2>Merge Pets</h2>
+      <p>Select two different pets to merge:</p>
+
+      <div id="mergePetsList" class="merge-pets-grid"></div>
+
+      <div class="merge-actions">
+        <button id="mergeConfirmBtn" class="btn btn-primary" disabled>
+          Merge Selected (20 PetCoin)
+        </button>
+        <button class="btn btn-secondary" onclick="closeMergeModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+  </main>
+
+  <script src="js/notifications.js"></script>
+  <script src="js/petCard.js"></script>
+  <script src="js/mypets.js"></script>
+</body>
+</html>

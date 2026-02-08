@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <title>Pet Market</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+  <div id="notificationContainer" class="notification-container"></div>
+  <nav>
+    <button onclick="window.location.href='index.html'">Home</button>
+    <button onclick="window.location.href='mypets.html'">My Pets</button>
+    <button onclick="window.location.href='market.html'">Market</button>
+    <button id="connectWallet">Connect Wallet</button>
+    <span id="balance"></span>
+  </nav>
+
+  <h1>Market Pets</h1>
+  <div id="marketContainer"></div>
+  <div id="loading">Loading...</div>
+
+  <script src="js/notifications.js"></script>
+  <script src="js/petCard.js"></script>
+  <script src="js/market.js"></script>
+</body>
+</html>

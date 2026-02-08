@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetLand</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+  <div id="notificationContainer" class="notification-container"></div>
+  <nav>
+    <button onclick="window.location.href='index.html'">Home</button>
+    <button onclick="window.location.href='mypets.html'">My Pets</button>
+    <button onclick="window.location.href='market.html'">Market</button>
+    <button id="connectWallet">Connect Wallet</button>
+    <span id="balance"></span>
+  </nav>
+
+  <main class="home-main">
+    <h1>PetLand</h1>
+    <p>Welcome to the world of cute pets!</p>
+
+    <div class="actions-bar">
+      <button id="createPet" class="btn btn-create">
+        Create Pet (10 PetCoin)
+      </button>
+    </div>
+
+    <div id="loading" class="loading" style="display:none;">Creating pet...</div>
+
+    <div id="lastPetSection" style="margin-top: 50px; text-align:center;">
+  <h2>Last Created Pet</h2>
+  <div id="lastPetCard" class="pet-card-container"></div>
+  <p id="noLastPet" style="display:none;">No pets created yet</p>
+</div>
+  </main>
+
+  <script src="js/notifications.js"></script>
+  <script src="js/petCard.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
